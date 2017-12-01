@@ -1,0 +1,291 @@
+[
+    {
+        "key": "group_5a1cddc7a6a26",
+        "title": "Classes",
+        "fields": [
+            {
+                "key": "field_5a1cdf484fc7c",
+                "label": "Season",
+                "name": "class__season",
+                "type": "select",
+                "instructions": "Choose one or more seasons",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "wi": "Winter",
+                    "sp": "Spring",
+                    "su": "Summer",
+                    "au": "Fall"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 1,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "array",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5a1d707fcf6e9",
+                "label": "Instructor",
+                "name": "class__instructor",
+                "type": "post_object",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "instructor"
+                ],
+                "taxonomy": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            },
+            {
+                "key": "field_5a1ce4f4ad723",
+                "label": "Location",
+                "name": "class__location",
+                "type": "post_object",
+                "instructions": "Choose a location (if necessary, add a location under \"Locations\")",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "location"
+                ],
+                "taxonomy": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            },
+            {
+                "key": "field_5a1d6c5f3914d",
+                "label": "Age Group",
+                "name": "class__age",
+                "type": "text",
+                "instructions": "Open fields to specify age group(s)",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "e.g.  Adults, 6-10 year olds, etc.",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a1ce60012c48",
+                "label": "Schedule",
+                "name": "class__schedule",
+                "type": "repeater",
+                "instructions": "Add dates and times that this particular class meets",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 1,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Add Class Time",
+                "sub_fields": [
+                    {
+                        "key": "field_5a1ce6bc12c49",
+                        "label": "Day(s) of Week",
+                        "name": "day",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "monday": "Monday",
+                            "tuesday": "Tuesday",
+                            "wednesday": "Wednesday",
+                            "thursday": "Thursday",
+                            "friday": "Friday",
+                            "saturday": "Saturday",
+                            "sunday": "Sunday"
+                        },
+                        "default_value": [],
+                        "allow_null": 0,
+                        "multiple": 1,
+                        "ui": 0,
+                        "ajax": 0,
+                        "return_format": "array",
+                        "placeholder": ""
+                    },
+                    {
+                        "key": "field_5a1ce74b12c4a",
+                        "label": "Start Time",
+                        "name": "start_time",
+                        "type": "time_picker",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "display_format": "g:i a",
+                        "return_format": "g:i a"
+                    },
+                    {
+                        "key": "field_5a1ce78c12c4b",
+                        "label": "End Time",
+                        "name": "end_time",
+                        "type": "time_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "display_format": "g:i a",
+                        "return_format": "g:i a"
+                    }
+                ]
+            },
+            {
+                "key": "field_5a1ce5597c960",
+                "label": "Exception Dates",
+                "name": "class__exceptions",
+                "type": "repeater",
+                "instructions": "Make a list of dates that this particular class is cancelled due to holidays, etc.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_5a1ce5907c961",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Add Cancellation Date",
+                "sub_fields": [
+                    {
+                        "key": "field_5a1ce5907c961",
+                        "label": "Date",
+                        "name": "date",
+                        "type": "date_picker",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "display_format": "F j, Y",
+                        "return_format": "m\/d\/Y",
+                        "first_day": 1
+                    }
+                ]
+            },
+            {
+                "key": "field_5a1d6ba33914c",
+                "label": "Fees",
+                "name": "class__fees",
+                "type": "table",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "use_header": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "class"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5a1d6f395f63d",
+        "title": "Instructors",
+        "fields": [
+            {
+                "key": "field_5a1d6f4a623d6",
+                "label": "Associated User",
+                "name": "instructor__user",
+                "type": "user",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "role": "",
+                "allow_null": 0,
+                "multiple": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "instructor"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]

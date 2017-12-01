@@ -11,10 +11,10 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: ymca
-      MYSQL_USER: ymca
-      MYSQL_PASSWORD: ymca
-      MYSQL_DATABASE: ymca
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
   wordpress:
     depends_on:
       - db
@@ -29,6 +29,5 @@ services:
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_PASSWORD: ymca
-      WORDPRESS_DB_NAME: ymca
-      WORDPRESS_TABLE_PREFIX: ymca_
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress

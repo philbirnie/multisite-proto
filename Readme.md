@@ -1,4 +1,4 @@
-# Wordpress Boilerplate Using Docker
+# Multisite Prototype
 
 This repository contains the seeds for a Wordpress site. :) 
 
